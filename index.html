@@ -1,0 +1,244 @@
+<!-- Thank you for taking the time to explore this part of Hom Mali!
+All code designed by Jenny Kim (Jenny-yah.com)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hommali</title>
+
+<!-- Favicon -->
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" sizes="64x64" type="image/x-icon">
+
+<!-- Link to JS -->
+<script src="interactive.js" defer></script>
+
+<!-- Link to CSS -->
+<link rel="stylesheet" href="index.css"> 
+
+
+
+<!-- Link to images -->
+<link rel="icon" type="image/png" href="/path/to/homepage/logo.png">
+<link rel="preload" href="images/background.png" as="image">
+<link rel="preload" href="images/logo.png" as="image">
+</head>
+
+<body style="overflow: hidden;">
+<div id="preloader">
+  <div class="loader-text">
+    <span>A love letter to Thailand...</span>
+    <span class="loader-subtext">click anywhere to see images</span>
+  </div>
+</div>
+
+<div>
+<div id="logo"><img src="images/logo.png" fetchpriority="high" alt="Hom Mali Logo" style="width: 300px; height: auto;">
+</div>
+
+
+<div class="info">
+    <div class="page">
+        <p>
+            <span class="deco-page menu-trigger">menu</span>
+            <span class="deco-page map-trigger">info</span>
+            <span class="deco-page happenings-trigger">happenings</span>
+        </p>
+    </div>
+    <p>An expression of Thai roots, lovingly crafted with warmth and creativity.
+    All reservations are available on <a class="links" href="https://resy.com" target="_blank" rel="noopener noreferrer">Resy</a>.
+    If you have any questions please reach us either by phone at +1 917 635 6254 or email at
+    <a class="links" href="mailto:info@hommalinyc.com">info@hommalinyc.com</a>.You can find us on social media
+    <a class="links" href="https://www.instagram.com/hommalinyc?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">@hommalinyc</a>. <br><span class="expand">To view images please expand your window brower.</span></p> 
+</div>
+
+<div class="footer">
+<p>© 2026 Hom Mali. All rights reserved. Last Updated 4/27/2026</p>
+</div>
+
+<!-- ======================
+IMAGE
+====================== -->
+<div class="home-image">
+<img class="image" src="images/image6.jpg"
+    style="--x: 72.17%; --y: 34.62%; --w: 22.32%; --r: -4deg;">
+<img class="image" src="images/image5.jpg"
+    style="--x: 22.32%; --y: 13.46%; --w: 18.60%; --r: 3deg;">
+<img class="image" src="images/image4.jpg"
+    style="--x: 55.80%; --y: 23.08%; --w: 18.60%; --r: 10deg;">
+<img class="image" src="images/image2.jpg"
+    style="--x: 7.44%; --y: 28.85%; --w: 18.60%; --r: -17deg;">
+<img class="image" src="images/image7.jpg"
+    style="--x: 26.79%; --y: 40.38%; --w: 18.60%; --r: 5deg;">
+<img class="image" src="images/image1.jpg"
+    style="--x: 40.92%; --y: 31.15%; --w: 18.60%; --r: -7deg;">
+<img class="image" src="images/image3.jpg"
+    style="--x: 68.45%; --y: 44.23%; --w: 18.60%; --r: 10deg;">
+</div>
+
+
+<!-- ======================
+Food & Beverage Menu BOX
+====================== -->
+<!-- food&drink slider button + menu description = menu-box -->
+<div class="menu-box">
+        <!-- Food and Drink Slider Button -->
+        <div class="option-container">
+            <button class="menu-back" type="button" aria-label="Back">back</button>
+            <div class="option">
+                <p class="menu-tab active" data-target="food">food</p>
+                <p class="menu-tab" data-target="drinks">drinks</p>
+                <span class="menu-slider"></span>
+            </div>
+        </div>
+
+    <!-- Food Menu Description -->
+    <div class="foodpanel panel active" id="food">
+        <div class="f-option-container"></div>
+
+        <div class="fd-layout">
+            <dl> Small Bite
+                <dt>Miang Kham  <span class=price>$12</span></dt>
+                <dd>Pomelo, Shrimp Relish, Betel Leaf, Kapi Cracker & Miang Sauce</dd>
+                    
+                <dt>Charcoal-Grilled Beef Satay & Young Rice Roti <span class=price>$10</span></dt>
+                <dd>Layered Beef Skewer, Young Rice Roti, Smoked Coconut Ajard & Pickles</dd>
+            </dl>
+
+
+            <dl> Cold
+                <dt>Cured Tuna with Green Apple <span class=price>$12</span></dt>
+                <dd>Apple Som Tum Vinaigrette, Tomato Vinegar Jelly, Jicama & Thai Herbs</dd>
+                    
+                <dt>Japanese Mackerel Tartare on Bamboo Shoot Relish <span class=price>$14 </span></dt>
+                <dd>Pickled Bamboo Shoot, Toasted Rice & Isan Herbs</dd>
+                    
+                <dt>Northern Larb Beef Tartare <span class=price>$10 </span></dt>
+                <dd>Dry-Aged Beef Heart, Fried Tripe,Beef Blood & Northern Larb Spices</dd>
+
+                <dt>Khaeng Som-Inspired Seafood Crudo <span class=price>$10 </span></dt>
+                <dd>Mussel, Razor Clam, Sweet Shrimp, Scallop & Celtuce</dd>
+
+                <dt>Seasonal Vegetable Salad <span class=price>$10 </span></dt>
+                <dd>Seasonal Vegetables, Roselle-Honey Vinaigrette & Lemongrass</dd>
+            </dl>  
+
+            <dl> Hot
+                <dt>Charcoal-Grilled Fermented Pork Jowl <span class=price>$18</span></dt>
+                <dd>Three Pickled Vegetables, Salted Betel Leaf & Khao Jee</dd>
+                    
+                <dt>Charcoal-Grilled River Prawn <span class=price>$19</span></dt>
+                <dd>Green Mango Salad, Fish Sauce Mango Caramel & Crispy Shrimp Floss</dd>
+                    
+                <dt>Crispy Vegetables & Tao Jiew Lon <span class=price>$19</span></dt>
+                <dd>Thai Fermented Soybean-Coconut Dip & Herbs</dd>
+            </dl> 
+
+            <dl> Main
+                <dt>Panang Curry of Beef Cheek <span class=price>$18</span></dt>
+                <dd>Roasted Peanut, Makrut Lime & Thai Basil</dd>
+                    
+                <dt>Aua Buck Ped Curry <span class=price>$19</span></dt>
+                <dd>Charred Pepper Stuﬀed with Red Curry & Grilled Beef Tenderloin</dd>
+                    
+                <dt>Mushroom XO Fried Rice <span class=price>$19</span></dt>
+                <dd>Charcoal-Grilled Maitake, Black Garlic & Shiitake Garum</dd>
+
+                <dt>Seafood Fried Rice <span class=price>$19</span></dt>
+                <dd>Grilled Seafood, Bottarga, Trout Roe & Nam Jim Seafood</dd>
+
+                <dt>Dry-Aged Duck Breast <span class=price>$19</span></dt>
+                <dd>Lotus-Wrapped Duck Fat Rice, Thai Palo Sauce, Pickled Mustard Greens & Grilled Vegetables
+
+                <dt>Branzino Steamed in Banana Leaf <span class=price>$19</span></dt>
+                <dd>Fish Curry Mousse & Jorang Curry</dd>   
+
+                <dt>Tilefish Po Tak <span class=price>$19</span></dt>
+                <dd>Thai Herbs, Aromatic Broth & Seasonal Vegetables</dd> 
+            </dl>
+
+            <dl> Dessert
+                <dt>Toasted Rice Ice Cream Bar <span class=price>$18</span></dt>
+                <dd>Coconut, Toasted Rice & Rice Crisp</dd>
+                    
+                <dt>Roselle Sorbet <span class=price>$19</span></dt>
+                <dd>Fermented Rice Cream, Seasonal Fruit & Kaﬃr Lime Oil</dd>
+            </dl>
+        </div>
+    </div>
+
+    <!-- Drink Menu Description -->
+    <div class="drinkpanel panel" id="drinks">
+        <div class="d-option-container"></div>
+        <div class="content fd-layout">
+            <dl> Cocktails
+                <dt>Pomelo salad with Shrimp Crackers <span class=price>$12</span></dt>
+                <dd>Coconut Mousse / Shrimp Kapi Cracker</dd>
+                        
+                <dt>Beef with Peanut Curry on Charred Toast <span class=price>$10</span></dt>
+                <dd>Crispy Beef floss / Peanut Curry Mousse </dd>
+            </dl>
+
+
+            <dl> Wine
+                <dt>Kina piscine <span class=price>$12</span></dt>
+                <dd>house quinquina blend, peach, bubbles</dd>
+                        
+                <dt>Tuna Pok Pok <span class=price>$14 </span></dt>
+                <dd>Som Tum Apple Vinaigrette / Tourch Ginger</dd>
+                        
+                <dt>Burnt Chilli Fruit Salad <span class=price>$10</span></dt>
+                <dd>(Veg) Yum Fruit / Burnt chili ice cream </dd>
+            </dl>  
+
+            <dl> non-alcoholic
+                <dt>spirit	<span class=price>$18</span></dt>
+                <dd>lemon lime</dd>
+                        
+                <dt>Tea <span class=price>$19</span></dt>
+                <dd>jasmine / green / chai</dd>
+                        
+                <dt>Coke <span class=price>$19</span></dt>
+                <dd></dd>
+                        
+                <dt>Fermented Pork wrapped with Betal leaves <span class=price>$19</span></dt>
+                <dd></dd>
+
+                <dt>Smoked Pork Collar with Mango Salad <span class=price>$19</span></dt>
+                <dd>Mango / Fish sauce Caramel</dd>
+                        
+                <dt>Grilled Prawn curry <span class=price>$19</span></dt>
+                <dd>Prawn curry mousse wrapped with Banana leaves</dd>
+
+                <dt>Wild Mushroom Dumpling with Radish Broth <span class=price>$19</span></dt>
+                <dd>(Veg) Smoked Jab Chai Consomme / Caramelized Daikon / Smoked Shiitake Mushroom </dd>
+            </dl> 
+        </div>
+    </div>
+</div>
+
+<!-- ======================
+INFO PAGE BOX
+====================== -->
+<div class="info-box">
+        <img class="map" src="images/map1.gif">
+        <div class="info-p"><p>We're open daily from 12:30 PM to 11:00 PM
+        (closed from 3:00 PM to 4:00 PM)
+        at <a class="map-link" href="https://www.google.com/maps/dir//28+7th+Ave+S,+New+York,+NY+10014/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x89c25992e7b69caf:0x549ca0d13adb9ef7?sa=X&ved=1t:707&ictx=111" target="_blank" rel="noopener noreferrer">28 7th Ave South, New York, NY 10014</a></p>
+        </div>
+</div>
+
+<!-- ======================
+HAPPENINGS PAGE BOX (temporary)
+====================== -->
+<img class="happenings-box happenings" src="images/happening.gif">
+
+<div>
+  <div class="background"></div>
+</div>
+
+
+</body>
+</html>
