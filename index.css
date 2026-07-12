@@ -524,12 +524,17 @@ Phone Screen vertical
 }
 
 /*Phone Screen*/ @media (min-width: 200px) and (max-width: 500px){
+
   #logo{
+  left: 50%;
   top: 40%;
+  width: fit-content;
+  transform: translate(-50%, -50%);
   }
 
   #logo img{
-  width: clamp(250px, 40vw, 260px);
+  display: block;
+  width: clamp(230px, 40vw, 240px)!important;
   }
 
   .background{
@@ -539,7 +544,7 @@ Phone Screen vertical
 
   .home-image{
   position: fixed;
-  top: clamp(35%, 40vw, 40%);
+  top: clamp(39%, 40vw, 45%);
   left: 50%;
   width: min(86vw, 390px);
   height: min(72vw, 360px);
@@ -553,8 +558,8 @@ Phone Screen vertical
   .home-image .image{
   position: absolute !important;
   left: 50% !important;
-  top: 45% !important;
-  width: min(74vw, 270px) !important;
+  top: 47% !important;
+  width: 270px !important;
   height: auto;
   object-fit: contain;
   transform: translate(-50%, -50%) rotate(var(--r)) !important;
@@ -571,9 +576,10 @@ Phone Screen vertical
 
   .info, .info-p{
   margin-left:8px;
+  letter-spacing: .1;
   bottom: 35px;
   width: 90%;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 22px;
   }
 
@@ -600,8 +606,8 @@ Phone Screen vertical
   transform: translate(-50%, -50%);
   align-items: center;
   justify-content: center;
-  height: clamp(320px, 20vw, 375px);
-  width: clamp(320px, 40vw, 350px);
+  height:350px;
+  width:310px;
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
