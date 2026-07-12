@@ -523,13 +523,13 @@ Phone Screen vertical
   }
 }
 
-/*Phone Screen*/ @media (min-width: 300px) and (max-width: 500px){
+/*Phone Screen*/ @media (min-width: 200px) and (max-width: 500px){
   #logo{
   top: 40%;
   }
 
   #logo img{
-  width: clamp(260px, 40vw, 265px);
+  width: clamp(250px, 40vw, 260px);
   }
 
   .background{
@@ -553,8 +553,8 @@ Phone Screen vertical
   .home-image .image{
   position: absolute !important;
   left: 50% !important;
-  top: 50% !important;
-  width: min(74vw, 300px) !important;
+  top: 45% !important;
+  width: min(74vw, 270px) !important;
   height: auto;
   object-fit: contain;
   transform: translate(-50%, -50%) rotate(var(--r)) !important;
@@ -573,7 +573,7 @@ Phone Screen vertical
   margin-left:8px;
   bottom: 35px;
   width: 90%;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 22px;
   }
 
@@ -585,6 +585,14 @@ Phone Screen vertical
   }
 
 /* Map */
+ .info-box-box {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;  
+  justify-content: center;
+}
+
 .info-box {
   position: fixed;
   top: clamp(35%, 40vw, 40%);
@@ -592,7 +600,7 @@ Phone Screen vertical
   transform: translate(-50%, -50%);
   align-items: center;
   justify-content: center;
-  height: clamp(340px, 20vw, 380px);
+  height: clamp(320px, 20vw, 375px);
   width: clamp(320px, 40vw, 350px);
   z-index: 1000;
   opacity: 0;
@@ -698,7 +706,105 @@ margin-left: 25px;
 }
 
 /* =======================
-Tablet Screen
+Touch Screens
+======================= */
+@media (hover: none) and (pointer: coarse) {
+  .home-image .image{
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  width: min(46.4vw, 344px) !important;
+  height: auto;
+  object-fit: contain;
+  transform: translate(-50%, -50%) rotate(var(--r)) !important;
+  box-shadow: none;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.321));
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  }
+
+  .home-image .image.is-layered-visible{
+  opacity: 1;
+  }
+
+  .gallery-arrow{
+  display: none;
+  pointer-events: none;
+  }
+
+  .info, .info-p{
+  margin-left: 15px;;
+  bottom: 35px;
+  width: 90%;
+  font-size: 14px;
+  line-height: 22px;
+  }
+
+  .footer{
+ margin-left: 15px;;
+  font-size: 10px;   
+  bottom:0 px;
+  color: #80221a;
+  }
+
+  /* Menu */
+  .menu-box{
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    transform: translateX(100%);
+    transition: transform 0.7s ease;
+    overflow: hidden;
+  }
+
+  .menu-box.active{
+    transform: translateX(0);
+  }
+
+  .menu-box *{
+    pointer-events: auto;
+  }
+
+  .option-container{
+    position: sticky;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+  }
+
+  .menu-back{
+    display: block;
+    appearance: none;
+    border: 0;
+    background: transparent;
+    color: #e76489;
+    cursor: pointer;
+    font-family: "univers", sans-serif;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-left: 25px;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  .fd-layout{
+  margin-top: -15px;
+  margin-left: 25px;
+  }
+}
+
+/* =======================
+Smaller laptop screen
 ======================= */
 /*Tablet Screen*/ @media (min-width: 501px) and (max-width: 890px){
   #logo{
@@ -859,7 +965,6 @@ margin-left: 25px;
     width: clamp(300px, 40vw, 350px);
   }
 }
-
 /* =======================
 Smaller Laptop Screen
 =========================*/
@@ -881,8 +986,8 @@ Smaller Laptop Screen
 
 /* MAP */
   .info-box{
-  height: clamp(440px, 44vw, 475px);
-  width: clamp(400px, 40vw, 450px);
+  height: clamp(425px, 44vw, 430px);
+  width: clamp(400px, 40vw, 405px);
   left: 50%;
   transform: translate(-50%, -50%);
   align-items: center;
@@ -916,24 +1021,18 @@ Smaller Laptop Screen
   }
 }
 
-
-
-
-
-
-
 /* =======================
 Laptops/ Desktops Defaults
 ======================= */
-/*Laptops Desktops*/ @media (min-width:1344px) and (max-width: 1649px){
+/*Laptops Desktops*/ @media (min-width:1344px){
 /* HOME IMAGES */
   .home-image{
   width: clamp(1120px, 115vw, 1344px);
   }
 
   .info-box{
-  width:450px;
-  height:475px;
+  width:clamp(400px, 5vw, 445px);
+  height: clamp(450px, 5vw, 470px);
   left: 50%;
   top:45%;
   transform: translate(-50%, -50%);
@@ -944,7 +1043,7 @@ Laptops/ Desktops Defaults
 
 /* HAPPENINGS */
   .happenings{
-  top:40%;
+  top:45%;
   width: clamp(430px, 40vw, 430px);
   }
 
@@ -953,6 +1052,25 @@ Laptops/ Desktops Defaults
 /* =======================
 horizontal
 ======================= */
+@media (min-height: 901px) and (hover: hover) and (pointer: fine){
+#logo{
+top:48%;
+}
+
+.home-image{
+top: calc(40% - var(--home-image-lift, 0px));
+}
+.home-image{
+width: clamp(1344px, 115vw, 1550px)
+}
+.info-box{
+top:48%;
+}
+.happenings{
+top:48%;
+}
+}
+
 /*horizontal*/@media (max-height: 750px) and (hover: hover) and (pointer: fine){
 .info{
 width:90%;
