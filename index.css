@@ -184,14 +184,16 @@ position: absolute;
 color: #80221a;
 }
 
-.links{
+.links,
+.link{
 color: #ae4563;  /*text color */
 font-style: italic;
 text-decoration: none;
 position: relative; /* needed for underline positioning */
 }
 
-.links::after{
+.links::after,
+.link::after{
   content: "";
   position: absolute;
   left: 0;
@@ -202,7 +204,8 @@ position: relative; /* needed for underline positioning */
   transition: width 0.3s ease;
 }
 
-.links:hover::after{
+.links:hover::after,
+.link:hover::after{
   width: 100%;
 }
 
@@ -543,11 +546,12 @@ Phone Screen vertical
   }
 
   .home-image{
+  --layered-image-width: clamp(290px, 78vw, 300px);
   position: fixed;
-  top: clamp(39%, 40vw, 45%);
+  top: clamp(36%, 40vw, 40%);
   left: 50%;
-  width: min(86vw, 390px);
-  height: min(72vw, 360px);
+  width: min(86vw, 430px);
+  height: min(72vw, 400px);
   display: block;
   overflow: visible;
   padding: 0;
@@ -559,7 +563,7 @@ Phone Screen vertical
   position: absolute !important;
   left: 50% !important;
   top: 44% !important;
-  width: 270px !important;
+  width: var(--layered-image-width) !important;
   height: auto;
   object-fit: contain;
   transform: translate(-50%, -50%) rotate(var(--r)) !important;
@@ -615,7 +619,7 @@ Phone Screen vertical
   align-items: center;
   justify-content: center;
   height:370px;
-  width:310px;
+  width:360px;
   z-index: 1000;
   opacity: 0;
   pointer-events: none;
@@ -701,7 +705,7 @@ margin-left: 25px;
     left: 50%;
     transform: translate(-50%, -50%) rotate(-3deg);
     height: auto;
-    width: clamp(290px, 40vw, 340px);
+    width: clamp(290px, 40vw, 370px);
     z-index: 1000;
     overflow: hidden;
     opacity: 0;
@@ -727,7 +731,7 @@ Touch Screens
   position: absolute !important;
   left: 50% !important;
   top: 50% !important;
-  width: min(46.4vw, 344px) !important;
+  width: var(--layered-image-width, min(46.4vw, 344px)) !important;
   height: auto;
   object-fit: contain;
   transform: translate(-50%, -50%) rotate(var(--r)) !important;
