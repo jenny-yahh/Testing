@@ -546,7 +546,7 @@ Phone Screen vertical
   }
 
   .home-image{
-  --layered-image-width: clamp(290px, 78vw, 300px);
+  --layered-image-width: clamp(260px, 78vw, 280px);
   position: fixed;
   top: clamp(36%, 40vw, 40%);
   left: 50%;
